@@ -1,0 +1,20 @@
+name: Generate Agent Release Notes
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/content/docs/release-notes/**'
+
+jobs:
+  publish-metadata:
+    name: Read agent metadata
+    runs-on: ubuntu-latest
+    steps:
+        - name: Read agent metadata
+          uses: newrelic/agent-metadata-action@v0.0.9
+          with:
+            newrelic-client-id: ${{ secrets.OAUTH_CLIENT_ID }}
+            newrelic-private-key: ${{ secrets.OAUTH_CLIENT_SECRET }}
