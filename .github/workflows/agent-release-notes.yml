@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Read agent metadata
-          uses: newrelic/agent-metadata-action@v0.0.11
+          uses: newrelic/agent-metadata-action@v0.0.12
           with:
             newrelic-client-id: ${{ secrets.OAUTH_CLIENT_ID }}
             newrelic-private-key: ${{ secrets.OAUTH_CLIENT_SECRET }}
