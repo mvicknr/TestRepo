@@ -12,9 +12,10 @@ jobs:
   publish-metadata:
     name: Read agent metadata
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
         - name: Read agent metadata
-          uses: newrelic/agent-metadata-action@v0.0.14
+          uses: newrelic/agent-metadata-action@v0.0.16
           with:
             newrelic-client-id: ${{ secrets.OAUTH_CLIENT_ID }}
             newrelic-private-key: ${{ secrets.OAUTH_CLIENT_SECRET }}
