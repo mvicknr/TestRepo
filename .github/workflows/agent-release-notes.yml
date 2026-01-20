@@ -15,7 +15,7 @@ jobs:
     continue-on-error: true
     steps:
         - name: Read agent metadata
-          uses: newrelic/agent-metadata-action@v0.0.16
+          uses: newrelic/agent-metadata-action@v0.0.17
           with:
             newrelic-client-id: ${{ secrets.OAUTH_CLIENT_ID }}
             newrelic-private-key: ${{ secrets.OAUTH_CLIENT_SECRET }}
